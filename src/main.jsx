@@ -7,7 +7,9 @@ import {
 } from "react-router-dom";
 import App from './App';
 import ShowList from './components/ShowList';
-import ShowSummary from './components/ShowSummary';
+import ShowCard from './components/ShowCard';
+import ShowDetails from './components/ShowDetails';
+import BookForm from './components/BookForm';
 
 const router = createBrowserRouter([
   {
@@ -19,8 +21,16 @@ const router = createBrowserRouter([
         element: <ShowList></ShowList>
       },
       {
-        path:'showsummary',
-        element: <ShowSummary></ShowSummary>
+        path:'showcard',
+        element: <ShowCard></ShowCard>
+      },
+      {
+        path:'showDetails/:id',
+        element:<ShowDetails></ShowDetails>
+      },
+      {
+        path:'booking/:name',
+        element:<BookForm></BookForm>
       }
     ]
   },

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import ShowSummary from './ShowSummary';
+import ShowCard from './ShowCard';
+
 
 const ShowList = () => {
     const [shows, setShows] = useState([]);
@@ -16,12 +17,12 @@ const ShowList = () => {
     }, []);
 
     return (
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-8'>
+        <div className='w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-8'>
             {
-                shows.map(show => <ShowSummary
+                shows.map(show => <ShowCard
                     key={show.id}
                     show={show}
-                ></ShowSummary>)
+                ></ShowCard>)
             }
         </div>
     );
